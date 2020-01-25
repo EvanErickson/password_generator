@@ -1,4 +1,4 @@
-let generateBtn = document.querySelector("#generate");
+let generateBtn = document.getElementById('generate');
 
 let writePassword = function(){
   prompt('Password:', 
@@ -7,4 +7,4 @@ let writePassword = function(){
   );
 }
 
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener('click', writePassword);
