@@ -1,14 +1,10 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+let writePassword = function(){
+  prompt('Here is your shiny new password:', 
+      Math.random().toString(36).slice(2) + 
+      Math.random().toString(36).slice(2)
+  );
 }
 
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
