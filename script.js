@@ -55,6 +55,11 @@ document.getElementById('generate').addEventListener('click', () => {
 // iterate over possible char and randomly choose characters with math function
 // do random funciton on each of the four arrays
 
+
+// function 1 get inputs and outputs
+// functino 2 generate password
+// render page
+
 if conditions are true, append corresponding array to new array called possible characters
 
    if ('generate' === hasUpperCase){
