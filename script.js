@@ -12,37 +12,22 @@ document.getElementById('generate').addEventListener('click', () => {
    console.log(hasNumber)
    let hasSpecial = confirm('Would you like to use special characters?')
    console.log(hasSpecial)
-
+})
 
 
 
    let result = '';
    let lowerCases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
    let upperCases = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-   let hasNumber = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-   let hasSpecial = ['@', '%',
-      '+',
-      '\\',
-      '/',
-      "'",
-      '!',
-      '#',
-      '$',
-      '^',
-      '?',
-      ':',
-      ',',
-      ')',
-      '(',
-      '}',
-      '{',
-      ']',
-      '[',
-      '~',
-      '-',
-      '_',
-      '.']
+   let numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+   let specialChar = ['@', '%','+','\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{',']','[','~','-','_','.']
    let possibleChar = []
+
+
+   if ('generate' === upperCases){
+      possibleChar.concat(upperCases)
+      console.log(possibleChar)
+   }
 
 
 
@@ -60,20 +45,16 @@ document.getElementById('generate').addEventListener('click', () => {
 // functino 2 generate password
 // render page
 
-if conditions are true, append corresponding array to new array called possible characters
+//if conditions are true, append corresponding array to new array called possible characters
 
-   if ('generate' === hasUpperCase){
+// // Write password to the #password input
+// function writePassword() {
+//    var password = generatePassword();
+//    var passwordText = document.querySelector("#password");
 
-   }
+//    passwordText.value = password;
 
-// Write password to the #password input
-function writePassword() {
-   var password = generatePassword();
-   var passwordText = document.querySelector("#password");
+// }
 
-   passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword)
