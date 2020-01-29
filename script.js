@@ -1,10 +1,17 @@
+let result = '';
+let lowerCases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+let upperCases = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+let numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+let specialChar = ['@', '%','+','\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{',']','[','~','-','_','.']
+let possibleChar = []
 
 let generateBtn = document.getElementById('generate');
+let hasUpperCase;
 
 document.getElementById('generate').addEventListener('click', () => {
    let length = parseInt(prompt('How many characters would you like in the password?'))
    console.log(typeof length)
-   let hasUpperCase = confirm('Would you like to use uppercase letters?')
+   hasUpperCase = confirm('Would you like to use uppercase letters?')
    console.log(hasUpperCase)
    let hasLowerCase = confirm('Would you like to use lowercase letters?')
    console.log(hasLowerCase)
@@ -12,22 +19,25 @@ document.getElementById('generate').addEventListener('click', () => {
    console.log(hasNumber)
    let hasSpecial = confirm('Would you like to use special characters?')
    console.log(hasSpecial)
+   
+   if (hasUpperCase){
+   possibleChar = possibleChar.concat(upperCases)
+   console.log(possibleChar)
+   } else if (hasLowerCase){
+      possibleChar = possibleChar.concat(lowerCases)
+      console.log(possibleChar)
+   } else if (hasNumber){
+      possibleChar = possibleChar.concat(numbers)
+      console.log(possibleChar)
+   } else if (hasSpecial){
+      possibleChar = possibleChar.concat(specialChar)
+      console.log(possibleChar)
+   }
 })
 
 
 
-   let result = '';
-   let lowerCases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-   let upperCases = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-   let numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-   let specialChar = ['@', '%','+','\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{',']','[','~','-','_','.']
-   let possibleChar = []
 
-
-   if ('generate' === upperCases){
-      possibleChar.concat(upperCases)
-      console.log(possibleChar)
-   }
 
 
 
